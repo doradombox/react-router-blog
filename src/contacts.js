@@ -12,6 +12,11 @@ export async function getContacts(query) {
   return contacts.sort(sortBy("last", "createdAt"));
 }
 
+/**
+ * //TODO 完成/之前/？
+ * 程序启动的时候在根路由加载模拟创建联系人
+ * @returns 联系人对象数组
+ */
 export async function createContact() {
   await fakeNetwork();
   let id = Math.random().toString(36).substring(2, 9);
